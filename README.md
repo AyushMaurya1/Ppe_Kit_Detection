@@ -20,7 +20,8 @@ Worker Detection Model: A YOLO model trained for detecting workers (person.pt).
 **Buzzer Audio:**
 Place the buzzer sound file (buzzer.wav) in the specified directory.
 
-**Usage\n**
+**Usage**
+
 Run the Script:
 python ppe_detection.py
 Select Model:
