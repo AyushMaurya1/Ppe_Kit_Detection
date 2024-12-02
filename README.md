@@ -1,29 +1,39 @@
 **PPE Detection System**
+
 This project implements a PPE (Personal Protective Equipment) detection system using YOLOv8 models. The system can analyze images, videos, or webcam feeds to detect compliance with PPE requirements. When non-compliance is detected, it triggers a buzzer sound as an alert.
 
+
 **Features**
+
 Image Detection: Analyze images for PPE compliance.
 Video Detection: Process video files to detect non-compliance.
 Webcam Detection: Monitor a live webcam feed for PPE violations.
 Audio Alert: Plays a buzzer sound when non-compliance is detected.
 Real-Time Display: Annotated outputs with detected objects are displayed.
 
+
 **Prerequisites**
+
 Python: Ensure Python 3.8+ is installed.
 Dependencies: Install the required Python libraries using:
 pip install ultralytics opencv-python numpy pygame
 
+
 **YOLOv8 Models:**
+
 PPE Detection Model: A YOLO model trained for PPE detection (yolo.pt).
 Worker Detection Model: A YOLO model trained for detecting workers (person.pt).
 
+
 **Buzzer Audio:**
+
 Place the buzzer sound file (buzzer.wav) in the specified directory.
 
 **Usage**
 
 Run the Script:
 python ppe_detection.py
+
 Select Model:
 PPE: For detecting PPE (e.g., helmets, vests, gloves).
 Worker: For detecting workers.
