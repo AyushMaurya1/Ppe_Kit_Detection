@@ -44,27 +44,36 @@ Video: Provide the path to a video file.
 Webcam: Use the default webcam for real-time monitoring.
 
 **Key Functions**
+
 1. Buzzer Initialization
 Initializes the buzzer using the pygame library.
 Triggers an alert when non-compliance is detected.
-2. YOLO Model Loading
+
+3. YOLO Model Loading
 Dynamically loads the selected YOLO model.
-3. Image Detection
+
+5. Image Detection
 Detects PPE violations in a static image.
 Displays an annotated image with detection results.
-4. Video Detection
+
+7. Video Detection
 Processes video frames to detect PPE violations.
 Plays the buzzer sound asynchronously when non-compliance is detected.
-5. Webcam Detection
+
+9. Webcam Detection
 Monitors a live feed from the webcam for PPE compliance.
 
+
 **Configuration**
+
 Modify the following paths in the script as per your system:
 PPE_MODEL_PATH = r"C:\Users\ayush\Downloads\ppe_detection\model\yolo.pt"
 WORKER_MODEL_PATH = r"C:\Users\ayush\Downloads\ppe_detection\model\person.pt"
 BUZZER_AUDIO_PATH = r"C:\Users\ayush\Downloads\buzzer.wav"
 
+
 **Troubleshooting**
+
 Model Not Loading:
 
 Ensure the model files are present in the specified directory.
@@ -80,14 +89,8 @@ Verify permissions for accessing the webcam.
 Dependencies Not Found:
 
 Run pip install -r requirements.txt with a requirements.txt file listing:
-Copy code
 ultralytics
 opencv-python
 numpy
 pygame
-Future Enhancements
-Add support for additional detection classes (e.g., face shields).
-Implement a logging system for compliance records.
-Optimize real-time performance for high-resolution inputs.
-License
-This project is open-source and can be modified or distributed under the MIT license.
+
