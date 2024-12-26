@@ -1,3 +1,13 @@
+# This script is designed for detecting Personal Protective Equipment (PPE) compliance using YOLO models.
+# It can process images, video files, or live webcam feeds to detect whether individuals are wearing necessary PPE items such as hardhats, vests, gloves, and boots.
+# The script includes the following functionalities:
+# - Initialize and load the YOLO models for PPE and Worker detection.
+# - Process input sources (image, video, webcam) to detect PPE compliance.
+# - Play a buzzer sound if non-compliance is detected (e.g., missing hardhat, vest, gloves, or boots).
+# - Use OpenCV to display annotated images or video frames with detected items.
+# - Utilize threading for non-blocking buzzer playback.
+# - Log detailed information and errors for debugging purposes.
+
 import cv2
 import numpy as np
 from ultralytics import YOLO
