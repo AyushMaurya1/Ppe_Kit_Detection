@@ -126,5 +126,5 @@ Modify the neceassry paths in the scripts as per your system.
 
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/AyushMaurya1/Ppe_Kit_Detection/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/AyushMaurya1/Ppe_Kit_Detection/blob/main/LICENSE.txt) file for details.
 
