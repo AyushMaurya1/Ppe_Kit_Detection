@@ -5,3 +5,4 @@ pathlib
 pygame
 threading
 logging
+Download this "yolov3.weights" from web
