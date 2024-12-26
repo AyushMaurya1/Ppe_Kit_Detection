@@ -1,5 +1,6 @@
 """This code leverages the YOLO model to detect and highlight humans in video files, 
 and optionally saves the processed videos to an output directory"""
+# This is further integrated in the ppe_detection_final.py script
 
 
 import cv2
