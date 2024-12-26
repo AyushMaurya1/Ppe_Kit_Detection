@@ -69,7 +69,7 @@ python human_detection.py
 To run the PPE detection system:
 
 ```bash
-python ppe_detection.py
+python ppe_detection_final.py
 ```
 
 #### Select Model:
@@ -88,7 +88,7 @@ python ppe_detection.py
 To run face recognition:
 
 ```bash
-python face_recognition.py
+python face_recognition1.py
 ```
 
 #### Select Input Type:
