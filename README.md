@@ -1,70 +1,110 @@
-**PPE Detection System**
+# PPE Detection System
 
-This project implements a PPE Detection System, Human Detection using YOLOv3, and Face Recognition. These systems can analyze images, videos, or webcam feeds to detect compliance with safety requirements, human presence, and recognize faces. Alerts are triggered when violations are detected, such as non-compliance with PPE or an unknown face.
+## Overview
 
+This project implements a **PPE Detection System**, **Human Detection using YOLOv3**, and **Face Recognition**. These systems can analyze images, videos, or webcam feeds to detect compliance with safety requirements, human presence, and recognize faces. Alerts are triggered when violations are detected, such as non-compliance with PPE or an unknown face.
 
-**Features**
+## Features
 
-Image Detection: Analyze images for PPE compliance.
-Video Detection: Process video files to detect non-compliance.
-Webcam Detection: Monitor a live webcam feed for PPE violations.
-Audio Alert: Plays a buzzer sound when non-compliance is detected.
-Real-Time Display: Annotated outputs with detected objects are displayed.
+- **Image Detection**: Analyze images for PPE compliance.
+- **Video Detection**: Process video files to detect non-compliance.
+- **Webcam Detection**: Monitor a live webcam feed for PPE violations.
+- **Audio Alert**: Plays a buzzer sound when non-compliance is detected.
+- **Real-Time Display**: Annotated outputs with detected objects are displayed.
 
+## Prerequisites
 
-**Prerequisites**
+Ensure you have **Python 3.8+** installed.
 
-Python: Ensure Python 3.8+ is installed.
-Dependencies: Install the required libraries using:
-bash
-Copy code
+### Dependencies
+
+Install the required libraries using the following commands:
+
+```bash
 pip install ultralytics opencv-python numpy pygame
 pip install opencv-python-headless  # For YOLOv3 Human Detection
 
 
-**YOLOv8 Models:**
 
-PPE Detection Model: A YOLO model trained for PPE detection (yolo.pt).
-Worker Detection Model: A YOLO model trained for detecting workers (person.pt).
+**Files Needed**
 
+PPE Detection Model:
 
-**Buzzer Audio:**
+yolo.pt: Trained YOLO model for PPE detection (helmets, vests, gloves).
+person.pt: For human detection
 
-Place the buzzer sound file (buzzer.wav) in the specified directory.
+Human Detection Model:
+
+yolov3.weights: YOLOv3 pre-trained weights.
+yolov3.cfg: YOLOv3 configuration file.
+coco.names: Class names for YOLOv3.
+
+Face Recognition:
+
+Known Faces: Folder containing images of known individuals for face recognition (e.g., person1.jpg, person2.jpg).
+Cascade Classifier: For face detection, a pre-trained haarcascade_frontalface_default.xml should be used.
+Audio Alert:
+
+buzzer.wav: The buzzer sound to trigger on violation detection.
 
 **Usage**
 
-Run the Script:
+1. Human Detection
+To run human detection:
+
+bash
+Copy code
+python human_detection.py
+Prepare Video Files:
+Place your video files in the videos directory.
+Supported formats: .mp4, .avi.
+Processing:
+The script processes all videos in the videos folder.
+It detects humans in each video and saves the processed videos in processed_videos.
+
+2. PPE Detection
+To run the PPE detection system:
 python ppe_detection.py
 
 Select Model:
-PPE: For detecting PPE (e.g., helmets, vests, gloves).
-Worker: For detecting workers.
+
+PPE Model: Detects PPE (helmets, vests, gloves).
+Worker Model: Detects workers in restricted zones.
 
 Select Source:
+
 Image: Provide the path to an image file.
 Video: Provide the path to a video file.
 Webcam: Use the default webcam for real-time monitoring.
 
+3. Face Recognition
+4. 
+To run face recognition:
+python face_recognition.py
+Select Input Type:
+
+Image: Provide the path to an image file.
+Video: Provide the path to a video file.
+Webcam: Use the default webcam for real-time face recognition.
+Known Faces Folder:
+
+Place images of known individuals in the known_faces folder (e.g., person1.jpg, person2.jpg).
+
 **Key Functions**
 
-1. Buzzer Initialization
-Initializes the buzzer using the pygame library.
-Triggers an alert when non-compliance is detected.
+PPE Detection:
 
-3. YOLO Model Loading
-Dynamically loads the selected YOLO model.
+Buzzer Alert: Plays a buzzer sound when PPE violations are detected.
+YOLOv8 Model: Dynamically loads the YOLOv8 model to detect PPE and workers.
+Real-Time Display: Shows annotated output for detected PPE.
+Human Detection (YOLOv3):
 
-5. Image Detection
-Detects PPE violations in a static image.
-Displays an annotated image with detection results.
+Human Detection: Identifies humans in video frames.
+Processed Videos: Annotated videos are saved in the processed_videos folder.
+Face Recognition:
 
-7. Video Detection
-Processes video frames to detect PPE violations.
-Plays the buzzer sound asynchronously when non-compliance is detected.
-
-9. Webcam Detection
-Monitors a live feed from the webcam for PPE compliance.
+Face Identification: Matches faces in images or videos with known individuals.
+Real-Time Webcam Feed: Supports live webcam recognition.
 
 
 **Configuration**
