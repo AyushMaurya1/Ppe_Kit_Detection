@@ -91,7 +91,7 @@ To run face recognition:
 python face_recognition.py
 ```
 
-####Select Input Type:
+#### Select Input Type:
 
 - Image: Provide the path to an image file.
 - Video: Provide the path to a video file.
@@ -101,7 +101,7 @@ python face_recognition.py
 
 Place images of known individuals in the known_faces folder (e.g., person1.jpg, person2.jpg).
 
-### Key Functions
+## Key Functions
 
 #### PPE Detection:
 
@@ -120,10 +120,10 @@ Place images of known individuals in the known_faces folder (e.g., person1.jpg, 
 - Real-Time Webcam Feed: Supports live webcam recognition.
 
 
-### Configuration
+## Configuration
 
 Modify the neceassry paths in the scripts as per your system.
 
 
-### License
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.
