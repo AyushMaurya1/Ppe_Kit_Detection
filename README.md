@@ -1,6 +1,6 @@
 **PPE Detection System**
 
-This project implements a PPE (Personal Protective Equipment) detection system using YOLOv8 models. The system can analyze images, videos, or webcam feeds to detect compliance with PPE requirements. When non-compliance is detected, it triggers a buzzer sound as an alert.
+This project implements a PPE Detection System, Human Detection using YOLOv3, and Face Recognition. These systems can analyze images, videos, or webcam feeds to detect compliance with safety requirements, human presence, and recognize faces. Alerts are triggered when violations are detected, such as non-compliance with PPE or an unknown face.
 
 
 **Features**
@@ -15,8 +15,11 @@ Real-Time Display: Annotated outputs with detected objects are displayed.
 **Prerequisites**
 
 Python: Ensure Python 3.8+ is installed.
-Dependencies: Install the required Python libraries using:
+Dependencies: Install the required libraries using:
+bash
+Copy code
 pip install ultralytics opencv-python numpy pygame
+pip install opencv-python-headless  # For YOLOv3 Human Detection
 
 
 **YOLOv8 Models:**
@@ -66,31 +69,8 @@ Monitors a live feed from the webcam for PPE compliance.
 
 **Configuration**
 
-Modify the following paths in the script as per your system:
-PPE_MODEL_PATH = r"C:\Users\ayush\Downloads\ppe_detection\model\yolo.pt"
-WORKER_MODEL_PATH = r"C:\Users\ayush\Downloads\ppe_detection\model\person.pt"
-BUZZER_AUDIO_PATH = r"C:\Users\ayush\Downloads\buzzer.wav"
+Modify the neceassry paths in the scripts as per your system.
 
 
-**Troubleshooting**
-
-Model Not Loading:
-
-Ensure the model files are present in the specified directory.
-Verify the ultralytics package is installed.
-Buzzer Not Playing:
-
-Confirm buzzer.wav exists at the specified path.
-Check if the pygame library is initialized properly.
-Webcam Issues:
-
-Ensure the webcam is connected and accessible.
-Verify permissions for accessing the webcam.
-Dependencies Not Found:
-
-Run pip install -r requirements.txt with a requirements.txt file listing:
-ultralytics
-opencv-python
-numpy
-pygame
-
+**License**
+This project is licensed under the MIT License - see the LICENSE file for details.
