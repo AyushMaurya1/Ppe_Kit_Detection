@@ -20,11 +20,10 @@ Ensure you have **Python 3.8+** installed.
 
 Install the required libraries using the following commands:
 
-```bash
+\```bash
 pip install ultralytics opencv-python numpy pygame
 pip install opencv-python-headless  # For YOLOv3 Human Detection
-
-
+\'''
 
 **Files Needed**
 
