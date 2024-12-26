@@ -1,3 +1,7 @@
+"""This code leverages the YOLO model to detect and highlight humans in video files, 
+and optionally saves the processed videos to an output directory"""
+
+
 import cv2
 import numpy as np
 import os
