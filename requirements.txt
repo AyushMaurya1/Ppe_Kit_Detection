@@ -1,2 +1,7 @@
 opencv-python
 numpy
+ultralytics
+pathlib
+pygame
+threading
+logging
