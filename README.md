@@ -20,40 +20,39 @@ Ensure you have **Python 3.8+** installed.
 
 Install the required libraries using the following commands:
 
-\```bash
+```bash
 pip install ultralytics opencv-python numpy pygame
 pip install opencv-python-headless  # For YOLOv3 Human Detection
-\'''
+```
 
-**Files Needed**
+## Files Needed
 
-PPE Detection Model:
+### PPE Detection Model:
+- **yolo.pt**: Trained YOLO model for PPE detection (helmets, vests, gloves).
+- **person.pt**: Model for human detection.
 
-yolo.pt: Trained YOLO model for PPE detection (helmets, vests, gloves).
-person.pt: For human detection
+### Human Detection Model:
+- **yolov3.weights**: YOLOv3 pre-trained weights.
+- **yolov3.cfg**: YOLOv3 configuration file.
+- **coco.names**: Class names for YOLOv3.
 
-Human Detection Model:
+### Face Recognition:
+- **Known Faces**: Folder containing images of known individuals for face recognition (e.g., `person1.jpg`, `person2.jpg`).
+- **Cascade Classifier**: Pre-trained `haarcascade_frontalface_default.xml` for face detection.
 
-yolov3.weights: YOLOv3 pre-trained weights.
-yolov3.cfg: YOLOv3 configuration file.
-coco.names: Class names for YOLOv3.
+### Audio Alert:
+- **buzzer.wav**: The buzzer sound to trigger on violation detection.
 
-Face Recognition:
+## Usage
 
-Known Faces: Folder containing images of known individuals for face recognition (e.g., person1.jpg, person2.jpg).
-Cascade Classifier: For face detection, a pre-trained haarcascade_frontalface_default.xml should be used.
-Audio Alert:
+### 1. Human Detection
 
-buzzer.wav: The buzzer sound to trigger on violation detection.
-
-**Usage**
-
-1. Human Detection
 To run human detection:
 
-bash
-Copy code
+```bash
 python human_detection.py
+```
+
 Prepare Video Files:
 Place your video files in the videos directory.
 Supported formats: .mp4, .avi.
