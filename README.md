@@ -53,62 +53,77 @@ To run human detection:
 python human_detection.py
 ```
 
-Prepare Video Files:
-Place your video files in the videos directory.
-Supported formats: .mp4, .avi.
-Processing:
-The script processes all videos in the videos folder.
-It detects humans in each video and saves the processed videos in processed_videos.
+#### Prepare Video Files
 
-2. PPE Detection
+- Place your video files in the `videos` directory.
+- Supported formats: `.mp4`, `.avi`.
+
+#### Processing
+
+- The script processes all videos in the `videos` folder.
+- It detects humans in each video and saves the processed videos in the `processed_videos` folder.
+
+
+### 2. PPE Detection
+
 To run the PPE detection system:
+
+```bash
 python ppe_detection.py
+```
 
-Select Model:
+#### Select Model:
 
-PPE Model: Detects PPE (helmets, vests, gloves).
-Worker Model: Detects workers in restricted zones.
+- PPE Model: Detects PPE (helmets, vests, gloves).
+- Worker Model: Detects workers in restricted zones.
 
-Select Source:
+#### Select Source:
 
-Image: Provide the path to an image file.
-Video: Provide the path to a video file.
-Webcam: Use the default webcam for real-time monitoring.
+- Image: Provide the path to an image file.
+- Video: Provide the path to a video file.
+- Webcam: Use the default webcam for real-time monitoring.
 
-3. Face Recognition
-4. 
+### 3. Face Recognition
+
 To run face recognition:
-python face_recognition.py
-Select Input Type:
 
-Image: Provide the path to an image file.
-Video: Provide the path to a video file.
-Webcam: Use the default webcam for real-time face recognition.
-Known Faces Folder:
+```bash
+python face_recognition.py
+```
+
+####Select Input Type:
+
+- Image: Provide the path to an image file.
+- Video: Provide the path to a video file.
+- Webcam: Use the default webcam for real-time face recognition.
+
+#### Known Faces Folder:
 
 Place images of known individuals in the known_faces folder (e.g., person1.jpg, person2.jpg).
 
-**Key Functions**
+### Key Functions
 
-PPE Detection:
+#### PPE Detection:
 
-Buzzer Alert: Plays a buzzer sound when PPE violations are detected.
-YOLOv8 Model: Dynamically loads the YOLOv8 model to detect PPE and workers.
-Real-Time Display: Shows annotated output for detected PPE.
-Human Detection (YOLOv3):
+- Buzzer Alert: Plays a buzzer sound when PPE violations are detected.
+- YOLOv8 Model: Dynamically loads the YOLOv8 model to detect PPE and workers.
+- Real-Time Display: Shows annotated output for detected PPE.
 
-Human Detection: Identifies humans in video frames.
-Processed Videos: Annotated videos are saved in the processed_videos folder.
-Face Recognition:
+#### Human Detection (YOLOv3):
 
-Face Identification: Matches faces in images or videos with known individuals.
-Real-Time Webcam Feed: Supports live webcam recognition.
+- Human Detection: Identifies humans in video frames.
+- Processed Videos: Annotated videos are saved in the processed_videos folder.
+
+#### Face Recognition:
+
+- Face Identification: Matches faces in images or videos with known individuals.
+- Real-Time Webcam Feed: Supports live webcam recognition.
 
 
-**Configuration**
+### Configuration
 
 Modify the neceassry paths in the scripts as per your system.
 
 
-**License**
+### License
 This project is licensed under the MIT License - see the LICENSE file for details.
