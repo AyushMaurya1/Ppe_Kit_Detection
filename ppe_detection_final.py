@@ -19,9 +19,9 @@ import threading
 import logging
 
 # Define paths for models and buzzer audio
-PPE_MODEL_PATH = r"C:\Users\ayush\Downloads\ppe_detection\model\yolo.pt"
-WORKER_MODEL_PATH = r"C:\Users\ayush\Downloads\ppe_detection\model\person.pt"
-BUZZER_AUDIO_PATH = r"C:\Users\ayush\Downloads\buzzer.wav"
+PPE_MODEL_PATH = "model\yolo.pt"
+WORKER_MODEL_PATH = "model\person.pt"
+BUZZER_AUDIO_PATH = "buzzer.wav"
 
 # Confidence threshold
 CONFIDENCE_THRESHOLD = 0.5
